@@ -1,10 +1,22 @@
+
 {{#each celebrities}}
+<div>
+
 <h2>
-{{this.catchPhrase}}
+{{this.name}}
 </h2>
+</div>
+
+<a href="/celebrities/{{this._id}}">show celebrities</a>
+<form action="celebrities/{{this._id}}/delete" method="get">
+<button type="submit">Delete one celebrity</button>
+
+</form>
+
+
 {{/each}}
-
-
+<a href="/celebrities/edit">Edit celebrity</a>
+<a href="/celebrities/new">Add new celebrity</a>
 
 
 
